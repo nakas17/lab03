@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <title>Lab03 ::: SAKAN</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <style>
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+
+    .row.content {height: 1500px}
+
+    
+
+    /* Set gray background color and 100% height */
+
+    .sidenav {
+
+      background-color: #2F4F4F;
+
+      height: 150%;
+
+    }
+
+    
+
+    /* Set black background color, white text and some padding */
+
+    footer {
+
+      background-color: #8FBC8F;
+
+      color: white;
+
+      padding: 15px;
+
+    }
+
+    
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+
+    @media screen and (max-width: 767px) {
+
+      .sidenav {
+
+        height: auto;
+
+        padding: 15px;
+
+      }
+
+      .row.content {height: auto;} 
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+
+
+<div class="container-fluid">
+
+  <div class="row content">
+
+    <div class="col-sm-3 sidenav">
+
+      <h4><font color =#FFFFFF>Sakan's Blog</font></h4>
+
+      <ul class="nav nav-pills nav-stacked">
+
+        <li class="active"><a href="lab03.html">Home</a></li>
+
+         <li><a href="Grid.html">Bootstrap :: การใช้งาน Grid</a></li>
+
+        <li><a href="Form.html">Bootstrap :: การใช้งาน Form</a></li>
+
+        
+
+      </ul><br>
+
+      <div class="input-group">
+
+        <input type="text" class="form-control" placeholder="Search Blog..">
+
+        <span class="input-group-btn">
+
+          <button class="btn btn-default" type="button">
+
+            <span class="glyphicon glyphicon-search"></span>
+
+          </button>
+
+        </span>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="col-sm-9">
+
+      <h4><small>RECENT POSTS</small></h4>
+
+      <hr>
+
+      <h2>การใช้งาน Grid ใน bootstrap</h2>
+
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Sakan Wannamorn, Feb 6, 2017.</h5>
+
+      <h5><span class="label label-danger">Grid</span> <span class="label label-primary">Bootstrap</span></h5><br>
+
+     
+
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Grid เป็นเครื่องมือที่ช่วยให้เราสามารถออกแบบเลย์เอาท์เอกสาร HTML ได้ดีเหมือนกับการใช้แท็ก table แต่ความเร็วในการโหลดเอกสารนั้นการใช้ div จะช่วยให้โหลดเอกสารได้เร็วขึ้น นอกจากนั้นยังช่วยให้เราสามารถออกแบบเลย์เอาท์สำหรับมือถือ และบนพีซีได้พร้อมๆ กัน หรือที่เราเรียกว่า Responsive Web Design (RWD) ซึ่งจะช่วยลดระยะเวลาในการพัฒนาได้มากขึ้น ระบบ Grid ของ Bootstrap นั้นจะแบ่งหน้าจอออกเป็น 12 คอลัมน์ โดยสามารถกำหนดค่าให้สามารถใช้ได้ทั้งมือถือ แท็บเล็ต หรือพีซีทั่วไป โดยคลาสกำหนดค่าความกว้างของคอลัมน์ การทำงานของระบบ Grid ใน Bootstrap 3 นั้นแสดงได้จากตารางต่อไปนี้</p>
+
+
+
+      <div class="table-responsive">
+
+      <table class="table table-bordered table-striped">
+
+      <thead>
+
+    <tr>
+
+      <th>&nbsp;</th>
+
+      <th>ขนาดเล็กพิเศษ (โทรศัพท์: xs)<small>&nbsp;(&lt;768px)</small></th>
+
+      <th>ขนาดเล็ก (แทปเบล็ต: sm)<small>&nbsp;(&ge;768px)</small></th>
+
+      <th>ขนาดกลาง (เดสทอป: md)<small>&nbsp;(&ge;992px)</small></th>
+
+      <th>ขนาดใหญ่ (เดสทอป :lg)<small>&nbsp;(&ge;1200px)</small></th>
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr>
+
+      <th scope="row">ลักษณะของ Grid</th>
+
+      <td>แสดงในแนวนอนทุกครั้ง</td>
+
+      <td colspan="3">ย่อและแสดงผลตามขนาดที่กำหนด</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">ความกว้างของ Container</th>
+
+      <td>ไม่มี (อัตโนมัติ)</td>
+
+      <td>750px</td>
+
+      <td>970px</td>
+
+      <td>1170px</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">คำนำหน้า Class</th>
+
+      <td><code>.col-xs-</code></td>
+
+      <td><code>.col-sm-</code></td>
+
+      <td><code>.col-md-</code></td>
+
+      <td><code>.col-lg-</code></td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">จำนวนคอลัมน์</th>
+
+      <td colspan="4">12</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">ความกว้างของ Column</th>
+
+      <td>อัตโนมัติ</td>
+
+      <td>~62px</td>
+
+      <td>~81px</td>
+
+      <td>~97px</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">Gutter width</th>
+
+      <td colspan="4">30px (15px on each side of a column)</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">Nestable</th>
+
+      <td colspan="4">Yes</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">Offsets</th>
+
+      <td colspan="4">Yes</td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">Column ordering</th>
+
+      <td colspan="4">Yes</td>
+
+    </tr>
+
+  </tbody>
+
+</table>
+
+</div>
+
+
+
+<h4>Grid System คืออะไร ?</h4>
+
+<p>ถ้าพูดกันแบบบ้านๆ ทั่วไปเราก็คงจะบอกว่าเป็น Layout ที่คอยควบคุมวัตถุต่างๆ บนหน้าเว็บไซต์ให้แสดงผลได้อย่างถูกต้องตามหลัก box layout ซึ่งจะส่งผลดีต่อการเขียนหนึ่งหน้าเว็บไซต์ แต่สามารถใช้ร่วมกับอุปกรณ์ทุกขนาดหน้าจอ Grid system ของ <strong>Bootstrap</strong> เอง แบ่งออกเป็น 12 คอลัมน์ ถ้าให้เห็นภาพง่ายขึ้นก็น่าจะต้องบอกว่า เหมือนกับตาราง 1 แถว มี 12 คอลัมน์ประมาณนั้น ดังภาพด้านล่าง</p>
+
+<figure id="attachment_3930" style="width: 895px" class="wp-caption alignnone"><img class="size-full wp-image-3930" src="g1.png" alt="Bootstrap Grid System" width="895" height="69"  sizes="(max-width: 895px) 100vw, 895px" /><figcaption class="wp-caption-text">รูปภาพจาก Bootstrap &#8211; แสดงให้เห็นว่า 1 row = 12 cols</figcaption></figure>
+
+<p>ซึ่งหน่วยที่เป็น 12 นี้ เราสามารถเฉลี่ยแต่ละส่วนได้ตามความต้องการ อย่างเช่น</p>
+
+<figure id="attachment_3931" style="width: 898px" class="wp-caption alignnone"><img class="size-full wp-image-3931" src="gg2.png" alt="Bootstrap Grid System" width="898" height="173" sizes="(max-width: 898px) 100vw, 898px" /><figcaption class="wp-caption-text">รูปตัวอย่างการเฉลี่ยแต่ละส่วนให้ไม่เกิน 12 cols</figcaption></figure>
+
+<p>ผู้อ่านน่าจะพอเห็นภาพกันบ้างแล้ว ซึ่งเวลาเขียนโค้ดนี้เอง เราจะต้องเริ่มต้นด้วย class ที่ชื่อว่า &#8220;<em>row</em>&#8221; และสร้าง element ภายในด้วย prefix class เริ่มต้นว่า &#8220;<em>col-หน่วยหน้าจอ-เลขคอลัมน์</em>&#8221; สิ่งที่เราต้องระบุเพิ่มเติมลงไปก็มี 2 ค่าด้วยกันคือ หน่วยหน้าจอ และ เลขคอลัมน์</p>
+
+<pre class="html">&lt;div class="row"&gt;
+
+    &lt;div class="col-sm-6"&gt; Columns A &lt;/div&gt;
+
+    &lt;div class="col-sm-6"&gt; Columns B &lt;/div&gt;
+
+&lt;/div&gt;</pre>
+
+<h4>หน่วยหน้าจอ &#8211; เลขคอลัมน์ ต้องระบุอะไร ?</h4>
+
+<p>หน่วยหน้าจอใน <strong>Bootstrap</strong> เวอร์ชั่นใหม่นี้มีทั้งหมด 4 แบบให้เลือกเรียกใช้ได้ตามสะดวก ซึ่งแต่ละหน่วยก็ควบคุมการแสดงผลตามขนาดหน้าจอ(หน่วยเป็น pixel) ตามที่ Bootstrap กำหนดไว้ในตอนแรก ซึ่งดูได้จากรูปภาพของเว็บไซต์ <strong>Bootstrap</strong> เอง หรือภาพด้านล่างนี้</p>
+
+<figure id="attachment_3934" style="width: 857px" class="wp-caption alignnone"><img class="size-full wp-image-3934" src="g3.png" alt="Grid Option - Bootstrap" width="857" height="225" sizes="(max-width: 857px) 100vw, 857px" /><figcaption class="wp-caption-text">แสดงข้อมูลการเรียกใช้ในแต่ละหน่วยหน้าจอ</figcaption></figure>
+
+      <hr>
+
+
+
+      
+
+      <h4>Leave a Comment:</h4>
+
+      <form role="form">
+
+        <div class="form-group">
+
+          <textarea class="form-control" rows="3" required></textarea>
+
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+
+      </form>
+
+      <br><br>
+
+      
+
+      <p><span class="badge">2</span> Comments:</p><br>
+
+      
+
+      <div class="row">
+
+        <div class="col-sm-2 text-center">
+
+          <img src="not.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+
+        </div>
+
+        <div class="col-sm-10">
+
+          <h4>Pakpoom areerutanachai <small>Sep 29, 2015, 9:12 PM</small></h4>
+
+          <p>กำลังหาเลยคร้าบขอบคุณมาก</p>
+
+          <br>
+
+        </div>
+
+        <div class="col-sm-2 text-center">
+
+          <img src="marc.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+
+        </div>
+
+        <div class="col-sm-10">
+
+          <h4>Marc Pattarayut<small>Sep 25, 2015, 8:25 PM</small></h4>
+
+          <p>เข้าใจมากขึ้นเลยครับ.</p>
+
+          <br>
+
+          <p><span class="badge">1</span> Comment:</p><br>
+
+          <div class="row">
+
+            <div class="col-sm-2 text-center">
+
+              <img src="gus.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+
+            </div>
+
+            <div class="col-xs-10">
+
+              <h4>Yanika <small>Sep 25, 2015, 8:28 PM</small></h4>
+
+              <p>เข้าใจเลยค่ะ</p>
+
+              <br>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+<footer class="container-fluid">
+
+  <p>Footer Text</p>
+
+</footer>
+
+
+
+</body>
+
+</html>
+

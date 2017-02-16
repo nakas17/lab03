@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lab03 ::: SAKAN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #2F4F4F;
+      height: 130%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #8FBC8F;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+       <h4><font color =#FFFFFF>Sakan's Blog</font></h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="lab03.html">Home</a></li>
+        <li><a href="Grid.html">Bootstrap :: การใช้งาน Grid</a></li>
+        <li><a href="Form.html">Bootstrap :: การใช้งาน Form</a></li>
+        
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+      <h4><small>RECENT POSTS</small></h4>
+      <hr>
+      <h2>การใช้งาน Form ใน bootstrap</h2>
+      <h5><span class="glyphicon glyphicon-time"></span> Post by Sakan wannamorn, Feb 6, 2017.</h5>
+      <h5><span class="label label-danger">Form</span> <span class="label label-primary">bootstrap</span></h5><br>
+     
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การใช้ CSS เพื่อกำหนดรูปแบบต่างๆ ให้กับคอนโทรลต่างๆ  ของฟอร์มในเอกสารนั้น Bootstrap มีคลาสที่หลากหลายที่จะช่วยให้เราสามารถปรับปต่างคอนโทรลต่างๆ ของฟอร์มให้ดูสวยงาม และน่าใช้งานมากยิ่งขึ้น โดยเราสามารถใช้คลาสต่างๆ ได้กับแท็ก &lt;input&gt;, &lt;textarea&gt; และ &lt;select&gt; โดยเราต้องทำการเพิ่มคลาส .form-control ให้กับคอนโทรลเหล่านั้น โดยความกว้างของคอนโทรลนั้นจะกว้าง 100% เป็นค่าเริ่มต้น แต่เราสามารถกำหนดค่าความกว้างให้เป็นตามที่เราต้องการได้ โดยการใช้สไตล์ซีท style="width: XXXpx;" และใช้งานร่วมกับ Grid ได้โดยความกว้างจะได้ขนาดเท่ากับขนาดของ Grid ตัวอย่างฟอร์ม</p>
+      <p>>>>>เริ่มแรกให้คุณสร้าง button สำหรับเรียก modal ขึ้นมาก่อน</p>
+      <pre>&lt;button class="btn btn-primary btn-lg" data-toggle="modal"data-target="#basicModal"&gt;Launch Form &lt;/button&gt;</pre>
+      <p>>>>>จากนั้นเราก็จะมาสร้างตัว Body ของ Modal</p>
+      <pre>&lt;div class="modal fade" id="basicModal"&gt;&lt;div class="modal-dialog"&gt;
+      &lt;div class="modal-content"&gt;&lt;div class="modal-header"&gt;&lt;button type="button" class="close" data-dismiss="modal"&gt;&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;&lt;span class="sr-only"&gt;Close&lt;/span&gt;&lt;/button&gt;&lt;
+      h2&gt;Register Form&lt;/h2&gt;&lt;/div&gt;&lt;div class="modal-body"&gt;
+      &lt;/div&gt;&lt;div class="modal-footer"&gt;Please fill your information.&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</pre>
+      <p>>>>>ทำเป็นกล่องกรอก Register เล็กๆ แล้วเราจะมาสร้าง Form ใส่ลงไปในส่วนของ class modal-body</p>
+      <pre>&lt;form role="form" action="#" method="post"&gt;&lt;div class="form-group"&gt;&lt;label for="email"&gt;Email address&lt;/label&gt;&lt;input type="email"class="form-control" id="email" placeholder="Enter email"&gt;&lt;/div&gt;
+      &lt;div class="form-group"&gt;&lt;label for="password"&gt;Password&lt;/label&gt;
+      &lt;input type="password" class="form-control"id="password" placeholder="Password"&gt;
+      &lt;/div&gt;&lt;div class="form-group"&gt;&lt;label for="telephone"&gt;Telephone&lt;/label&gt;&lt;input type="tel" class="form-control" id="telephone"placeholder="Enter telephone number"&gt;&lt;/div&gt;&lt;div class="form-group"&gt;&lt;label for="address"&gt;Address&lt;/label&gt;&lt;textarea id="address" class="form-control" name="address" rows="3"&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;button type="submit" class="btn btn-default"&gt; Save &lt;/button&gt;&lt;/form&gt;</pre>
+      <p>>>>>แบบนี้ จากนั้นพอเรากด button เรียกขึ้นมาเราก็จะได้ form ขึ้นมาใช้งานกันแล้ว</p>
+      <div id="attachment_2523" style="width: 480px" class="wp-caption aligncenter">
+      <img data-attachment-id="2523" data-permalink="http://teerapuch.com/2014/coding/html-css/%e0%b8%aa%e0%b8%a3%e0%b9%89%e0%b8%b2%e0%b8%87-form-%e0%b8%81%e0%b8%a3%e0%b8%ad%e0%b8%81%e0%b8%82%e0%b9%89%e0%b8%ad%e0%b8%a1%e0%b8%b9%e0%b8%a5%e0%b8%9a%e0%b8%99-modal-%e0%b8%82%e0%b8%ad%e0%b8%87-bootst/attachment/form-modal/" data-orig-file="https://i1.wp.com/teerapuch.com/wp-content/uploads/2014/12/form-modal.png?fit=622%2C624" data-orig-size="622,624" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="ภาพประกอบ : form modal bootstrap" data-image-description="&lt;p&gt;ภาพประกอบ : form modal bootstrap&lt;/p&gt;
+      " data-medium-file="https://i1.wp.com/teerapuch.com/wp-content/uploads/2014/12/form-modal.png?fit=300%2C300" data-large-file="https://i1.wp.com/teerapuch.com/wp-content/uploads/2014/12/form-modal.png?fit=622%2C624" class="size-large wp-image-2523" src="g4.png?resize=470%2C472" alt="ภาพประกอบ : form modal bootstrap" sizes="(max-width: 470px) 100vw, 470px" data-recalc-dims="1"/></a><p class="wp-caption-text"></p></div>
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+      <p><span class="badge">2</span> Comments:</p><br>
+      
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="not.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Pakpoom areerutanachai <small>Sep 29, 2015, 9:12 PM</small></h4>
+          <p>กำลังหาเลยคร้าบขอบคุณมาก</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="marc.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>Marc Pattarayut<small>Sep 25, 2015, 8:25 PM</small></h4>
+          <p>เข้าใจมากขึ้นเลยครับ.</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="gus.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Yanika <small>Sep 25, 2015, 8:28 PM</small></h4>
+              <p>เข้าใจเลยค่ะ</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Footer Text</p>
+</footer>
+
+</body>
+</html>
